@@ -19,3 +19,16 @@ Já o OCP é observado na função calculate_total_area(). Pode ser adicionado n
 
 Principio I (Princípio da substituição de Liskov) & Prefira Composição a Herança
 
+O código utilizado é basicamente um sistema de gerenciamento de dispositivos eletrônicos em uma casa, como lâmpadas e televisões.
+
+Código que viola esses príncipios:
+
+![image](https://github.com/MagalhaesExe/Principio_SOLID/assets/125324885/48bc67e5-b552-4ac6-8b11-9f9e5395a748)
+
+A classe 'TV' viola o Princípio da Segregação de Interfaces (ISP), pois ela tem métodos específicos para ligar e desligar uma lâmpada, que não são relevantes para uma TV em si. Além disso, em vez de usar composição para adicionar funcionalidades específicas, como o controle de uma lâmpada, a classe 'TV' inclui métodos diretamente relacionados à lâmpada, violando o princípio "Prefira Composição a Herança".
+
+Código que segue os princípios:
+
+![image](https://github.com/MagalhaesExe/Principio_SOLID/assets/125324885/36265b37-b364-420f-848a-f61a2aa02bd3)
+
+Esse código é mais modular e organizado, pois define interfaces separadas para diferentes comportamentos, csda classe implementa apenas as interfaces relevantes para ela, mantendo o código coeso e focado em uma única responsabilidade e seguindo os princípios I e Prefira Composição a Herança. Além de resultar em um baixo acoplamento, facilitando a manutenção e extensão do código.
